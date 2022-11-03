@@ -1,0 +1,16 @@
+Brainstorming
+book recommendation app?
+hike recommendation/review app? -> similar to "Trip list" idea in FRODO
+
+
+Project name:
+
+Potential MVPs
+
+Wireframing: fig jam - figma tool 
+
+Coding TODO
+
+Get basic HTML set up for MVPs, being mindful of making classes for each necessary element for styling
+Work on CSS ([header], [body containing nav, content, possibly sidebar], [footer]) - use CSS Grids?
+Write out basic functionality for each MVP in front-end JS
