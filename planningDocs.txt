@@ -1,15 +1,27 @@
 Brainstorming
-book recommendation app?
 hike recommendation/review app? -> similar to "Trip list" idea in FRODO
 
 
 Project name:
 
 Potential MVPs
+Base Minimum:
+
+create lists of hikes with themes (lazy (easy) hikes, desert hikes, mountain, etc.)
+add/delete form for saving specific hikes to lists
+drop down menu for hike rating
+
+
+Additional potential:
+
+Account creation? Log in form?
+Multiple pages to navigate to?
+use weather API?
+use location API for getting nearby hikes from specified locations?
 
 Wireframing: fig jam - figma tool 
 
-Coding TODO
+Coding TODO:
 
 Get basic HTML set up for MVPs, being mindful of making classes for each necessary element for styling
 Work on CSS ([header], [body containing nav, content, possibly sidebar], [footer]) - use CSS Grids?
