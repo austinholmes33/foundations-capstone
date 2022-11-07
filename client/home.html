@@ -8,35 +8,79 @@
     <title>Foundations Capstone</title>
 </head>
 <body>
-    <div class="hikeListForm">
-      <h2 class="hikeListHeader">Categorize Your Hikes! Customize Your Next Adventure!</h2>
-      <form>
-        <input/>
-    </form>
-    
-    </div>
 
-    <br>
+<header>
+         
+    <div id="top-header">
+         <!-- Logo -->
+        <div id="logo">
+            <img src=""/>
+        </div>   
+                 
+        <!-- Navbar, if other pages are made -->
+        <!-- <nav>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Your Hikes</a></li>
+            </ul>
+        </nav>
+    </div>    -->
 
-    <div class="hikeForm">
-        <h2 class="hikeFormHeader">Add a Hike to Your List!</h2>
-        <form>
-            <input/>
+</header>
+
+    <div id="hike-list">
+        <h2 class="hike-list-header">Categorize Your Hikes! Customize Your Next Adventure!</h2>
+        <form class="hike-list-form"></form>
+            <label>Hike List:</label>
+            <input type="text" id="list-name"/>
+            <input type="submit" id="list-submit"/>
+            <button></button>
         </form>
 
     </div>
 
     <br>
 
-    <div class="hikeReview">
-        <label for="rating">Rate Your Hike:</h2>
-        <select name="rating" id="rating">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
+    <div id="hikes">
+        <h2 class="hikes-header">Add a Hike to Your List!</h2>
+        <form class="hikes-form"></form>
+            <label for="hike-name">Hike</label>
+            <input type="text" id="hike-name"/>
+            <br>
+
+            <label for="hike-location">Location</label>
+            <input type="text" id="hike-location"/>
+            <br>
+
+            <label for="hike-distance">Distance</label>
+            <input type="number" id="hike-distance"/>
+            <br>
+
+            <input type="radio" id="easy" name="difficulty" value="Easy">
+            <label for="easy">Easy</label><br>
+            <input type="radio" id="moderate" name="difficulty" value="Moderate">
+            <label for="moderate">Moderate</label><br>
+            <input type="radio" id="strenuous" name="difficulty" value="Strenuous">
+            <label for="strenuous">Strenuous</label><br>
+
+            <input type="submit" id="hike-submit" value="Submit"/>
+        </form>
+
+    </div>
+
+    <br>
+
+    <div id="review">
+        <form class="hike-review">
+            <label for="rating">Rate Your Hike:</label>
+            <select name="rating" id="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </form>
     </div>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>
