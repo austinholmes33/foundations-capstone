@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <title>Foundations Capstone</title>
 </head>
 <body>
@@ -14,8 +17,10 @@
     <div id="top-header">
          <!-- Logo -->
         <div id="logo">
-            <img src=""/>
+            <img src="https://e7.pngegg.com/pngimages/287/679/png-clipart-logo-hiking-silhouette-angle-animals-thumbnail.png"/>
         </div>   
+        <h1>Welcome to the Site</h1>
+    </div>
                  
         <!-- Navbar, if other pages are made -->
         <!-- <nav>
@@ -27,6 +32,8 @@
     </div>    -->
 
 </header>
+
+<section id="forms">
 
     <div id="hike-list">
         <h2 class="hike-list-header">Categorize Your Hikes! Customize Your Next Adventure!</h2>
@@ -71,7 +78,8 @@
 
     <div id="review">
         <form class="hike-review">
-            <label for="rating">Rate Your Hike:</label>
+            <h2>Rate Your Hike!</h2>
+            <label for="rating">Rating:</label>
             <select name="rating" id="rating">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -81,6 +89,7 @@
             </select>
         </form>
     </div>
+</section>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="home.js"></script>

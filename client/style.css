@@ -1,14 +1,52 @@
 body {
+    font-family: 'Merriweather', serif;
+    background-image: url('https://images.unsplash.com/photo-1575732357845-6124331a5e36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1624&q=80');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #top-header {
-    background-color: black;
-    opacity: 20%;
+    /* background-color: black;
+    opacity: 20%; */
     height: 100px;
+    display: flex;
+    flex-direction: row;
 }
 
 #logo {
-    height: 100px;
-    width: 50px;
+
+
 }
 
+#forms {
+    margin: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#hike-list {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    background-color: #D4DFC7;
+}
+
+#hikes {
+
+    grid-column: 2;
+    grid-row: 2 / 5;
+    background-color: #D4DFC7;
+
+}
+
+#review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3;
+    grid-row: 2 / 5;
+    background-color: #D4DFC7;
+    font-size: larger;
+}
