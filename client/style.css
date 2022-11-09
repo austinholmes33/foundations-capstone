@@ -1,0 +1,14 @@
+body {
+}
+
+#top-header {
+    background-color: black;
+    opacity: 20%;
+    height: 100px;
+}
+
+#logo {
+    height: 100px;
+    width: 50px;
+}
+

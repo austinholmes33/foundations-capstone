@@ -29,7 +29,7 @@ function submitList (event) {
         name: listName.value
     }
 
-    axios.post('', bodyObj)
+    axios.post('http://localhost:4005/submitlist', bodyObj)
     .then((res) => {
         console.log(res)
         alert(bodyObj.name + ' Added!')
@@ -52,7 +52,7 @@ function submitHike (event) {
         difficult: easy.value || moderate.value || strenuous.value
     }
 
-    axios.post('', bodyObj)
+    axios.post('http://localhost:4005/submithike', bodyObj)
     .then((res) => {
         console.log(res)
         alert(bodyObj.name + ' Added to Your List!')
