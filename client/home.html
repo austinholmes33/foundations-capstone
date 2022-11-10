@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
-    <title>Foundations Capstone</title>
+    <title>Home Page</title>
 </head>
 <body>
 
@@ -19,17 +19,12 @@
         <div id="logo">
             <img src="https://cimages1.touristlink.com/repository/P/T/B/A/L/I/E/K/pt-bali-ekstrimindo-adventure.png"/>
         </div>   
-        <h1>Welcome to the Site</h1>
-    </div>
-                 
-        <!-- Navbar, if other pages are made -->
-        <!-- <nav>
-            <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Your Hikes</a></li>
-            </ul>
+        <h1>Welcome to the Site</h1>                 
+        <nav id="navbar">
+                <a class="active"><a href="./home.html">Home</a>
+                <a href="./yourHikes.html">Your Hikes</a>
         </nav>
-    </div>    -->
+    </div>   
 
 </header>
 
@@ -74,21 +69,6 @@
 
     </div>
 
-    <br>
-
-    <div id="review">
-        <form class="hike-review">
-            <h2>Rate Your Hike!</h2>
-            <label for="rating">Rating:</label>
-            <select name="rating" id="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </form>
-    </div>
 </section>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>

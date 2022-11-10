@@ -18,9 +18,7 @@ const moderate = document.getElementById("moderate");
 const strenuous = document.getElementById("strenuous");
 const hikeSubmit = document.getElementById("hike-submit");
 
-const review = document.getElementById("review");
-const hikeReview = document.getElementsByClassName("hike-review");
-const rating = document.getElementById("rating");
+const yourHikes = document.getElementById("your-hikes")
 
 function submitList (event) {
     event.preventDefault()
