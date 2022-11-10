@@ -7,7 +7,7 @@ const PORT = process.env.PORT
 app.use(cors())
 app.use(express.json())
 
-const {seed, submitList, submitHike} = require('./controller')
+const {seed, submitList, submitHike} = require('./controller.js')
 
 app.get('/seed', seed)
 app.post('/submitlist', submitList)
