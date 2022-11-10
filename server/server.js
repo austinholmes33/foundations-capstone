@@ -11,7 +11,7 @@ const {seed, submitList, submitHike} = require('./controllers/controller.js')
 const {homePage, stylePage} = require('./controllers/pageCtrl.js')
 
 app.get('/seed', seed)
-app.get('/home', homePage)
+app.get('/', homePage)
 app.get('/style', stylePage)
 app.post('/submitlist', submitList)
 app.post('/submithike', submitHike)
