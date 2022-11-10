@@ -19,6 +19,13 @@ module.exports = {
             INSERT INTO hike_lists (name);
             VALUES ('${name}');
         `)
+        .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+        })
+        .catch((err) => {
+            console.log(err)
+            res.status(500).send('sequelize error')
+        })
     },
 
     submitHike: (req, res) => {
@@ -31,6 +38,13 @@ module.exports = {
             INSERT INTO hikes (name, location, distance, difficulty);
             VALUES ('${name}', '${location}', '${distance}', '${difficulty}');
         `)
+        .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+        })
+        .catch((err) => {
+            console.log(err)
+            res.status(500).send('sequelize error')
+        })
     },
 
     seed: (req, res) => {
