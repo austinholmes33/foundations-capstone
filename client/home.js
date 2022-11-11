@@ -37,9 +37,6 @@ function submitList (event) {
     })
 }
 
-    //may need to do something with this to make it add to an existing list
-    //not sure which direction to go with that yet
-    //possibly model it after the warrior/weapon pair function jared did 25min in 
 function submitHike (event) {
     event.preventDefault()
 
