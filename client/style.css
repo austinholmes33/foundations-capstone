@@ -37,22 +37,22 @@ body {
 #hike-list {
     grid-column: 1;
     grid-row: 2 / 5;
-    background-color: #D4DFC7;
+    background-color: white;
 }
 
 #hikes {
     grid-column: 2;
     grid-row: 2 / 5;
-    background-color: #D4DFC7;
+    background-color: white;
 
 }
 
-#review {
+#listDisplay {
     display: flex;
     align-items: center;
     justify-content: center;
     grid-column: 3;
     grid-row: 2 / 5;
-    background-color: #D4DFC7;
+    background-color: white;
     font-size: larger;
 }
