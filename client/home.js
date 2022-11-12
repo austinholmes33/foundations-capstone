@@ -1,5 +1,5 @@
-const topHeader = document.getElementById("top-header")
-const logo = document.getElementById("logo")
+const topHeader = document.getElementById("header-background")
+const logo = document.getElementById("header-content")
 
 const hikeList = document.getElementById ("hike-list");
 const hikeListHeader = document.getElementsByClassName("hike-list-header");

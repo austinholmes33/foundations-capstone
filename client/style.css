@@ -6,23 +6,39 @@ body {
     background-size: cover;
 }
 
-#top-header {
-    /* background-color: black;
-    opacity: 20%; */
-    height: 100px;
+#header-container {
     display: flex;
     flex-direction: row;
+    align-content: flex-end;    
+    width: 100%;
+    height: 200px;
 }
 
-#logo {
+#header-background {
+    background: rgba(15, 15, 15, 0.2);    
     height: 100px;
-    justify-content: flex-start
+    width: 100%;
+    display: flex;
+    z-index: -1;
+    position: relative;
+}
+
+#header-content {
+    display: flex;
+    justify-content: space-between;
+    /* align-content: flex-end;     */
+    height: 100px;
+    width: 100%;
+    opacity: 100%;
+    z-index: 1;
+    position: relative;
 }
 
 #navbar {
+    display: flex;
     margin: 0;
     padding: 0;
-    justify-content: flex-end;
+    
 }
 
 #forms {
@@ -34,12 +50,14 @@ body {
 }
 
 #hike-list {
+    border-radius: 25px;
     grid-column: 1;
     grid-row: 2 / 5;
     background-color: white;
 }
 
 #hikes {
+    border-radius: 25px;
     grid-column: 2;
     grid-row: 2 / 5;
     background-color: white;
