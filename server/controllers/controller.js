@@ -13,11 +13,11 @@ const sequelize = new Sequelize(DATABASE_URL, {
 
 module.exports = {
     submitList: (req, res) => {
-        const name = req.body.name
+        const listName = req.body.listName
 
         sequelize.query(`
-            INSERT INTO hike_lists (name);
-            VALUES ('${name}');
+            INSERT INTO hike_lists (listName);
+            VALUES ('${listName}');
         `)
         .then((dbRes) => {
             res.status(200).send(dbRes[0])
@@ -29,14 +29,14 @@ module.exports = {
     },
 
     submitHike: (req, res) => {
-        const name = req.body.name
+        const hikeName = req.body.hikeName
         const location = req.body.location
         const distance = req.body.distance
         const difficulty = req.body.difficulty
 
         sequelize.query(`
-            INSERT INTO hikes (name, location, distance, difficulty);
-            VALUES ('${name}', '${location}', '${distance}', '${difficulty}');
+            INSERT INTO hikes (hikeName, location, distance, difficulty);
+            VALUES ('${hikeName}', '${location}', '${distance}', '${difficulty}');
         `)
         .then((dbRes) => {
             res.status(200).send(dbRes[0])
@@ -46,4 +46,23 @@ module.exports = {
             res.status(500).send('sequelize error')
         })
     },
-}
+
+    // getHikes: (req,res) => {
+    //     const listName = req.body.listName
+    //     const hikeName = req.body.hikeName
+    //     const location = req.body.location
+    //     const distance = req.body.distance
+    //     const difficulty = req.body.difficulty
+
+    //     sequelize.query(`
+    //         SELECT listName, hikeName, location, distance, difficulty);
+    //         VALUES ('${listName}', '${hikeName}', '${location}', '${distance}', '${difficulty}');
+    //     `)
+    //     .then((dbRes) => {
+    //         res.status(200).send(dbRes[0])
+    //     })
+    //     .catch((err) => {
+    //         console.log(err)
+    //         res.status(500).send('sequelize error')
+    //     })
+    }

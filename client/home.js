@@ -4,12 +4,12 @@ const logo = document.getElementById("logo")
 const hikeList = document.getElementById ("hike-list");
 const hikeListHeader = document.getElementsByClassName("hike-list-header");
 const hikeListForm = document.getElementsByClassName("hike-list-form");
-const listName = document.getElementsById("list-name");
+const listName = document.getElementById("list-name");
 const listSubmit = document.getElementById("list-submit");
 
 const hikes = document.getElementById("hikes");
 const hikesHeader = document.getElementsByClassName("hikes-header");
-const hikesForm = document.getElementsByClassName("hikes-form");
+const hikesForm = document.getElementById("hikes-form");
 const hikeName = document.getElementById("hike-name");
 const hikeLocation = document.getElementById("hike-location");
 const hikeDistance = document.getElementById("hike-distance");
@@ -24,7 +24,7 @@ function submitList (event) {
     event.preventDefault()
 
     let bodyObj = {
-        name: listName.value
+        listName: listName.value
     }
 
     axios.post('http://localhost:4005/submitlist', bodyObj)
@@ -40,13 +40,13 @@ function submitList (event) {
 function submitHike (event) {
     event.preventDefault()
 
+
     let bodyObj = {
-        name: hikeName.value,
+        hikeName: hikeName.value,
         location: hikeLocation.value,
         distance: hikeDistance.value,
-        difficult: easy.value || moderate.value || strenuous.value
+        difficulty: (easy.checked && easy.value) || (moderate.checked && moderate.value) || (strenuous.checked && strenuous.value)
     }
-
     axios.post('http://localhost:4005/submithike', bodyObj)
     .then((res) => {
         console.log(res)
@@ -57,5 +57,19 @@ function submitHike (event) {
     })
 }
 
+// function getHikes (event) {
+//     event.preventDefault()
+
+//     let bodyObj = {
+//         listName: listName.value,
+//         hikeName: hikeName.value,
+//         location: hikeLocation.value,
+//         distance: hikeDistance.value,
+//         difficulty: easy.value || moderate.value || strenuous.value
+//     }
+
+//     axios.get('http://localhost:4005/gethikes', bodyObj)
+// }
+
 listSubmit.addEventListener('submit', submitList)
-hikeSubmit.addEventListener('submit', submitHike)
+hikesForm.addEventListener('submit', submitHike)
