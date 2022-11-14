@@ -46,13 +46,13 @@ body {
 #header-title {
     display: flex;
     justify-content: center;
-    margin-left: 700px;
+    margin-left: 680px;
     align-items: center;
     height: 100px;
     width: 100%;
     opacity: 100%;
     position: relative;
-    font-size: larger;
+    font-size: x-large;
     color: white;
     text-shadow: 0 -3px black, 0 -5px black;
 }
@@ -73,7 +73,8 @@ body {
 }
 
 .all-trails {
-    color: white;
+    background-color: white;
+    color: black;
     display: flex;
     padding: 10px;
     margin-right: 15px;
@@ -85,7 +86,7 @@ body {
 }
 
 .all-trails:hover {
-    background-color: beige;
+    background-color: rgb(237, 174, 59);
     color: black;
 }
 
@@ -166,11 +167,16 @@ body {
 #displayContainer {
     background-color: white;
     border-radius: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-left: 35%;
+    margin-right: 35%;
+    /* grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     grid-auto-rows: minmax(100px, auto);
     display: grid;
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 2; */
     color: black;
 }
