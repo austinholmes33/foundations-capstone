@@ -22,16 +22,6 @@ body {
     position: relative;
 }
 
-/* #header-content {
-    display: flex;
-    justify-content: flex-start;
-    font-size: larger;
-    height: 100px;
-    width: 100%;
-    opacity: 100%;
-    position: relative;
-    color: white;
-} */
 
 #logo {
     display: flex;
@@ -99,17 +89,6 @@ body {
 
 }
 
-/* #hike-list {
-    display: block;
-    text-align: center;
-    border: 10px solid rgba(15, 15, 15, 0.7);
-    padding-top: 100px;
-    border-radius: 25px;
-    grid-column: 1;
-    grid-row: 2 / 5;
-    background-color: white; */
-/* } */
-
 #hikes {
     display: grid;
     grid-column: 1;
@@ -174,11 +153,5 @@ body {
     margin: auto;
     margin-left: 35%;
     margin-right: 35%;
-    /* grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    grid-auto-rows: minmax(100px, auto);
-    display: grid;
-    grid-column: 1;
-    grid-row: 2; */
     color: black;
 }

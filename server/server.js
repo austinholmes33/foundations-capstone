@@ -13,7 +13,6 @@ const {homePage, stylePage, homeJS} = require('./controllers/pageCtrl.js')
 app.get('/', homePage)
 app.get('/home', homeJS)
 app.get('/style', stylePage)
-// app.post('/submitlist', submitList)
 app.post('/submithike', submitHike)
 app.get(`/searchhikes/:searchHikeNameInput`, searchHikes)
 

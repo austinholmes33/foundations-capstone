@@ -12,22 +12,7 @@ const sequelize = new Sequelize(DATABASE_URL, {
 })
 
 module.exports = {
-    // submitList: (req, res) => {
-    //     console.log(req.body)
-    //     const listName = req.body.listName
 
-    //     sequelize.query(`
-    //         INSERT INTO hike_lists (listName)
-    //         VALUES ('${listName}');
-    //     `)
-    //     .then((dbRes) => {         
-    //         res.status(200).send(dbRes[0])
-    //     })
-    //     .catch((err) => {
-    //         console.log(err)
-    //         res.status(500).send('sequelize error')
-    //     })
-    // },
 
     submitHike: (req, res) => {
         console.log(req.body)

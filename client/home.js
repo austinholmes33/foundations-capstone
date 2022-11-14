@@ -1,11 +1,6 @@
 const topHeader = document.getElementById("header-background")
 const logo = document.getElementById("header-content")
 
-// const hikeList = document.getElementById ("hike-list");
-// const hikeListHeader = document.getElementsByClassName("hike-list-header");
-// const hikeListForm = document.getElementsByClassName("hike-list-form");
-// const listName = document.getElementById("list-name");
-// const listSubmit = document.getElementById("list-submit");
 
 const hikes = document.getElementById("hikes");
 const hikesHeader = document.getElementsByClassName("hikes-header");
@@ -18,12 +13,6 @@ const moderate = document.getElementById("moderate");
 const strenuous = document.getElementById("strenuous");
 const hikeSubmit = document.getElementById("hike-submit");
 const category = document.getElementById("category")
-// const chill = document.getElementById("chill");
-// const long = document.getElementById("long");
-// const desert = document.getElementById("desert");
-// const mountain = document.getElementById("mountain");
-// const flat = document.getElementById("flat");
-// const steep = document.getElementById("steep");
 
 
 const hikeSearch = document.getElementById("hike-search")
@@ -33,22 +22,6 @@ const displayContainer = document.getElementById("displayContainer")
 
 const yourHikes = document.getElementById("your-hikes")
 
-// function submitList (event) {
-//     event.preventDefault()
-
-//     let bodyObj = {
-//         listName: listName.value
-//     }
-
-//     axios.post('http://localhost:4005/submitlist', bodyObj)
-//     .then((res) => {
-//         console.log(res)
-//         alert(bodyObj.name + ' Added!')
-//     })
-//     .catch((err) => {
-//         console.log(err)
-//     })
-// }
 
 function submitHike (event) {
     event.preventDefault()
@@ -100,6 +73,5 @@ function searchHikes (event) {
     })
 }
 
-// listSubmit.addEventListener('submit', submitList)
 hikesForm.addEventListener('submit', submitHike)
 hikeSearch.addEventListener('submit', searchHikes)
