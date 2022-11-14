@@ -17,15 +17,17 @@ const easy = document.getElementById("easy");
 const moderate = document.getElementById("moderate");
 const strenuous = document.getElementById("strenuous");
 const hikeSubmit = document.getElementById("hike-submit");
-const chill = document.getElementById("chill");
-const long = document.getElementById("long");
-const desert = document.getElementById("desert");
-const mountain = document.getElementById("mountain");
-const flat = document.getElementById("flat");
-const steep = document.getElementById("steep");
+const category = document.getElementById("category")
+// const chill = document.getElementById("chill");
+// const long = document.getElementById("long");
+// const desert = document.getElementById("desert");
+// const mountain = document.getElementById("mountain");
+// const flat = document.getElementById("flat");
+// const steep = document.getElementById("steep");
 
 
 const hikeSearch = document.getElementById("hike-search")
+const searchHikeName = document.getElementById("search-hike-name")
 
 const yourHikes = document.getElementById("your-hikes")
 
@@ -61,17 +63,14 @@ function submitHike (event) {
         (moderate.checked && moderate.value) || 
         (strenuous.checked && strenuous.value),
 
-        category: (chill.checked && chill.value) ||
-        (long.checked && long.value) ||
-        (desert.checked && desert.value) ||
-        (mountain.checked && mountain.value) ||
-        (flat.checked && flat.value) ||
-        (steep.checked && steep.value)
+        category: category.value
     }
     axios.post('http://localhost:4005/submithike', bodyObj)
     .then((res) => {
-        console.log(res)
-        alert(bodyObj.name + ' Added to Your List!')
+        console.log(res.data)
+        if (res.status === 200) {
+            alert(bodyObj.hikeName + ' added to your list!')
+        }
     })
     .catch((err) => {
         console.log(err)
@@ -81,20 +80,16 @@ function submitHike (event) {
 function searchHikes (event) {
     event.preventDefault()
 
-    let bodyObj = {
-        hikeName: hikeName.value,
-        location: hikeLocation.value,
-        distance: hikeDistance.value,
-        difficulty: easy.value || moderate.value || strenuous.value,
-        category: chill.value || 
-        long.value ||
-        desert.value ||
-        mountain.value ||
-        flat.value ||
-        steep.value
-    }
+    const searchHikeNameInput = searchHikeName.value
+    console.log(searchHikeNameInput)
+    axios.get(`http://localhost:4005/searchhikes/${searchHikeNameInput}`)
+    .then((res) => {
+        console.log(res)
 
-    axios.get('http://localhost:4005/searchhikes', bodyObj)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
 }
 
 // listSubmit.addEventListener('submit', submitList)

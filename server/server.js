@@ -15,6 +15,6 @@ app.get('/home', homeJS)
 app.get('/style', stylePage)
 // app.post('/submitlist', submitList)
 app.post('/submithike', submitHike)
-app.get('/searchhikes', searchHikes)
+app.get(`/searchhikes/:searchHikeNameInput`, searchHikes)
 
 app.listen(PORT, () => {console.log('listening on PORT ' + PORT)})
