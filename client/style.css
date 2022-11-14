@@ -1,5 +1,5 @@
 body {
-    font-family: 'Merriweather', serif;
+    font-family:'Montserrat', sans-serif;
     background-image: url('https://images.unsplash.com/photo-1575732357845-6124331a5e36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1624&q=80');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -54,7 +54,7 @@ body {
     position: relative;
     font-size: x-large;
     color: white;
-    text-shadow: 0 -3px black, 0 -5px black;
+    text-shadow: 0 4px black, 0 6px black;
 }
 
 
@@ -82,7 +82,7 @@ body {
     text-decoration: none;
     border: 3px solid black;
     border-radius: 10px;
-    box-shadow: 2px -2px 6px black;
+    box-shadow: 2px 2px 4px black;
 }
 
 .all-trails:hover {
@@ -115,13 +115,14 @@ body {
     grid-column: 1;
     grid-row: 2 / 5;
     text-align: left;
+    font-size: large;
     padding-left: 32%;
     padding-bottom: 5%;
-    border: 10px solid rgba(15, 15, 15, 0.7);
+    border: 6px solid rgba(15, 15, 15, 0.7);
     padding-top: 50px;
     border-radius: 25px;
     background-color: white;
-    box-shadow: -6px -6px 10px black;
+    box-shadow: 3px 3px 10px black;
 }
 
 #hike-location:hover {
@@ -145,14 +146,15 @@ body {
     grid-column: 2;
     grid-row: 2 / 5;
     text-align: center;
-    border: 10px solid rgba(15, 15, 15, 0.7);
+    font-size: large;
+    border: 7px solid rgba(15, 15, 15, 0.7);
     padding-top: 12%;
     padding-bottom: 12%;
     padding-right: 30%;
     padding-left: 30%;
     border-radius: 25px;
     background-color: white;
-    box-shadow: -6px -6px 10px black;
+    box-shadow: 3px 3px 6px black;
 }
 
 
