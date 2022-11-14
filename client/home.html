@@ -30,7 +30,7 @@
 
 <section id="forms">
 
-    <div id="hike-list">
+    <!-- <div id="hike-list">
         <h2 class="hike-list-header">Categorize Your Hikes! Customize Your Next Adventure!</h2>
         <form class="hike-list-form">
             <label>Hike List:</label>
@@ -40,7 +40,7 @@
 
     </div>
 
-    <br>
+    <br> -->
 
     <div id="hikes">
         <h2 class="hikes-header">Add a Hike to Your List!</h2>
@@ -64,12 +64,23 @@
             <input type="radio" id="strenuous" name="difficulty" value="Strenuous">
             <label for="strenuous">Strenuous</label><br>
 
+            <select name="category" id="category">
+            <label for="category">Hike Category</label>
+            <option value="chill">Chill</option>
+            <option value="long">Long</option>
+            <option value="desert">Desert</option>
+            <option value="mountain">Mountain</option>
+            <option value="flat">Flat</option>
+            <option value="steep">Steep</option>
+            </select>
+            <br>
+
             <input type="submit" id="hike-submit" value="Submit"/>
         </form>
 
     </div>
 
-    <form id="listDisplay">
+    <form id="hike-search">
         <h2></h2>
 
     </form>

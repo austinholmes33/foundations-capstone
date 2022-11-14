@@ -7,13 +7,13 @@ const PORT = process.env.PORT
 app.use(cors())
 app.use(express.json())
 
-const {submitList, submitHike} = require('./controllers/controller.js')
+const {submitHike} = require('./controllers/controller.js')
 const {homePage, stylePage, homeJS} = require('./controllers/pageCtrl.js')
 
 app.get('/', homePage)
 app.get('/home', homeJS)
 app.get('/style', stylePage)
-app.post('/submitlist', submitList)
+// app.post('/submitlist', submitList)
 app.post('/submithike', submitHike)
 // app.get('/gethikes', getHikes)
 
