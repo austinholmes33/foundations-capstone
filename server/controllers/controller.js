@@ -35,10 +35,11 @@ module.exports = {
         const location = req.body.location
         const distance = req.body.distance
         const difficulty = req.body.difficulty
+        const category = req.body.category
 
         sequelize.query(`
             INSERT INTO hikes (hikeName, location, distance, difficulty)
-            VALUES ('${hikeName}', '${location}', '${distance}', '${difficulty}');
+            VALUES ('${hikeName}', '${location}', '${distance}', '${difficulty}', '${category});
         `)
         .then((dbRes) => {         
             res.status(200).send(dbRes[0])
@@ -49,22 +50,23 @@ module.exports = {
         })
     },
 
-    // getHikes: (req,res) => {
-    //     const listName = req.body.listName
-    //     const hikeName = req.body.hikeName
-    //     const location = req.body.location
-    //     const distance = req.body.distance
-    //     const difficulty = req.body.difficulty
+    searchHikes: (req,res) => {
+        const hikeName = req.body.hikeName
+        const location = req.body.location
+        const distance = req.body.distance
+        const difficulty = req.body.difficulty
+        const category = req.body.category
 
-    //     sequelize.query(`
-    //         SELECT hikeName, location, distance, difficulty);
-    //         VALUES ('${listName}', '${hikeName}', '${location}', '${distance}', '${difficulty}');
-    //     `)
-    //     .then((dbRes) => {
-    //         res.status(200).send(dbRes[0])
-    //     })
-    //     .catch((err) => {
-    //         console.log(err)
-    //         res.status(500).send('sequelize error')
-    //     })
+        sequelize.query(`
+            SELECT hikeName, location, distance, difficulty);
+            VALUES ('${listName}', '${hikeName}', '${location}', '${distance}', '${difficulty}', '${category});
+        `)
+        .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+        })
+        .catch((err) => {
+            console.log(err)
+            res.status(500).send('sequelize error')
+        })
     }
+}

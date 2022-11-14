@@ -78,7 +78,7 @@ function submitHike (event) {
     })
 }
 
-function searchHike (event) {
+function searchHikes (event) {
     event.preventDefault()
 
     let bodyObj = {
@@ -94,9 +94,9 @@ function searchHike (event) {
         steep.value
     }
 
-    axios.get('http://localhost:4005/gethikes', bodyObj)
+    axios.get('http://localhost:4005/searchhikes', bodyObj)
 }
 
 // listSubmit.addEventListener('submit', submitList)
 hikesForm.addEventListener('submit', submitHike)
-hikeSearch.addEventListener('submit', searchHike)
+hikeSearch.addEventListener('submit', searchHikes)
