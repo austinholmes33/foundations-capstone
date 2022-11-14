@@ -17,6 +17,12 @@ const easy = document.getElementById("easy");
 const moderate = document.getElementById("moderate");
 const strenuous = document.getElementById("strenuous");
 const hikeSubmit = document.getElementById("hike-submit");
+const chill = document.getElementById("chill");
+const long = document.getElementById("long");
+const desert = document.getElementById("desert");
+const mountain = document.getElementById("mountain");
+const flat = document.getElementById("flat");
+const steep = document.getElementById("steep");
 
 
 const hikeSearch = document.getElementById("hike-search")
@@ -46,9 +52,21 @@ function submitHike (event) {
 
     let bodyObj = {
         hikeName: hikeName.value,
+
         location: hikeLocation.value,
+
         distance: hikeDistance.value,
-        difficulty: (easy.checked && easy.value) || (moderate.checked && moderate.value) || (strenuous.checked && strenuous.value)
+
+        difficulty: (easy.checked && easy.value) || 
+        (moderate.checked && moderate.value) || 
+        (strenuous.checked && strenuous.value),
+
+        category: (chill.checked && chill.value) ||
+        (long.checked && long.value) ||
+        (desert.checked && desert.value) ||
+        (mountain.checked && mountain.value) ||
+        (flat.checked && flat.value) ||
+        (steep.checked && steep.value)
     }
     axios.post('http://localhost:4005/submithike', bodyObj)
     .then((res) => {
@@ -67,7 +85,13 @@ function searchHike (event) {
         hikeName: hikeName.value,
         location: hikeLocation.value,
         distance: hikeDistance.value,
-        difficulty: easy.value || moderate.value || strenuous.value
+        difficulty: easy.value || moderate.value || strenuous.value,
+        category: chill.value || 
+        long.value ||
+        desert.value ||
+        mountain.value ||
+        flat.value ||
+        steep.value
     }
 
     axios.get('http://localhost:4005/gethikes', bodyObj)
