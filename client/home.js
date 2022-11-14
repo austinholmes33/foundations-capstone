@@ -29,6 +29,8 @@ const category = document.getElementById("category")
 const hikeSearch = document.getElementById("hike-search")
 const searchHikeName = document.getElementById("search-hike-name")
 
+const displayContainer = document.getElementById("displayContainer")
+
 const yourHikes = document.getElementById("your-hikes")
 
 // function submitList (event) {
@@ -84,8 +86,14 @@ function searchHikes (event) {
     console.log(searchHikeNameInput)
     axios.get(`http://localhost:4005/searchhikes/${searchHikeNameInput}`)
     .then((res) => {
-        console.log(res)
-
+        console.log(res.data)
+        displayContainer.innerHTML = `
+        <h1> hikename: ${res.data[0].hikename}</h1>
+        <h2> location: ${res.data[0].location}</h2>
+        <h2> distance: ${res.data[0].distance}</h2>
+        <h2> difficulty: ${res.data[0].difficulty}</h2>
+        <h2> category: ${res.data[0].category}</h2>
+        `
     })
     .catch((err) => {
         console.log(err)

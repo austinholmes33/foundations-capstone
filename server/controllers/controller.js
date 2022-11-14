@@ -51,13 +51,13 @@ module.exports = {
     },
 
     searchHikes: (req,res) => {
-        console.log(req.param)
-        const {searchHikeNameInput} = req.param
+        console.log(req.params)
+        const {searchHikeNameInput} = req.params
 
         sequelize.query(`
             SELECT *
             FROM hikes
-            WHERE hikename = ${searchHikeNameInput}
+            WHERE hikeName = '${searchHikeNameInput}';
         `)
         .then((dbRes) => {
             res.status(200).send(dbRes[0])
