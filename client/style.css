@@ -19,41 +19,74 @@ body {
     height: 125px;
     width: 100%;
     display: flex;
-    z-index: -1;
     position: relative;
 }
 
-#header-content {
+/* #header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-size: larger;
     height: 100px;
     width: 100%;
     opacity: 100%;
-    z-index: 1;
+    position: relative;
+    color: white;
+} */
+
+#logo {
+    display: flex;
+    justify-content: flex-start;
+    height: 125px;
+    width: 125px;
+    opacity: 100%;
     position: relative;
     color: white;
 }
 
-.logo {
-    height: 125px;
-    width: 125px;
+#header-title {
+    display: flex;
+    justify-content: center;
+    margin-left: 700px;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    opacity: 100%;
+    position: relative;
+    font-size: larger;
+    color: white;
+    text-shadow: 0 2px black, 0 7px black;
 }
 
+
 #navbar {
-    height: 50px;
-    width: 100px;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     margin: 0;
     padding: 0;
-
+    height: 100px;
+    width: 100%;
+    opacity: 100%;
+    position: relative;
+    color: white;
+    font-size: large;
 }
 
 .all-trails {
     color: white;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    padding: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
+    text-decoration: none;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 3px -3px 10px black;
+}
+
+.all-trails:hover {
+    background-color: beige;
+    color: black;
 }
 
 #forms {
@@ -87,7 +120,7 @@ body {
     padding-top: 50px;
     border-radius: 25px;
     background-color: white;
-
+    box-shadow: -6px -6px 10px black;
 }
 
 #hike-search {
@@ -99,4 +132,14 @@ body {
     padding-right: 40%;
     border-radius: 25px;
     background-color: white;
+    box-shadow: -6px -6px 10px black;
+}
+
+#search-hike-name:hover {
+    border: 4px solid black;
+}
+
+#displayContainer {
+    display: grid;
+    color: white;
 }
